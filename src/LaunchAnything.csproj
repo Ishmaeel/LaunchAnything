@@ -36,8 +36,9 @@
     <ApplicationIcon>rocket.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SAM.API">
-      <HintPath>..\..\..\Github\SteamAchievementManager\SAM.API\bin\x86\Debug\net40\SAM.API.dll</HintPath>
+    <Reference Include="SAM.API, Version=7.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SAM.API.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -89,7 +90,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Credits.txt" />
     <Content Include="rocket.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
