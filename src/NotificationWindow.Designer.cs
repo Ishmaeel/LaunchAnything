@@ -33,6 +33,7 @@ namespace Exiclick.LaunchAnything
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.labelHint = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.buttonNow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // progressBar
@@ -42,7 +43,7 @@ namespace Exiclick.LaunchAnything
             this.progressBar.Location = new System.Drawing.Point(12, 42);
             this.progressBar.Maximum = 3000;
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(662, 23);
+            this.progressBar.Size = new System.Drawing.Size(550, 23);
             this.progressBar.Step = 200;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 0;
@@ -63,11 +64,23 @@ namespace Exiclick.LaunchAnything
             this.timer.Interval = 10;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // buttonNow
+            // 
+            this.buttonNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNow.Location = new System.Drawing.Point(568, 42);
+            this.buttonNow.Name = "buttonNow";
+            this.buttonNow.Size = new System.Drawing.Size(106, 23);
+            this.buttonNow.TabIndex = 2;
+            this.buttonNow.Text = "Launch Now";
+            this.buttonNow.UseVisualStyleBackColor = true;
+            this.buttonNow.Click += new System.EventHandler(this.ButtonNow_Click);
+            // 
             // NotificationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 77);
+            this.Controls.Add(this.buttonNow);
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -85,5 +98,6 @@ namespace Exiclick.LaunchAnything
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label labelHint;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button buttonNow;
     }
 }

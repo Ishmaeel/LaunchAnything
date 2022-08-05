@@ -46,5 +46,11 @@ namespace Exiclick.LaunchAnything
 
             progressBar.Value = progress;
         }
+
+        private void ButtonNow_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = false;
+            DialogResult = DialogResult.Yes;
+        }
     }
 }
